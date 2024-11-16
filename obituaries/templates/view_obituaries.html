@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>View Obituaries</title>
+</head>
+<body>
+    <h1>Obituaries</h1>
+    <ul>
+        {% for obituary in obituaries %}
+            <li>
+                <strong>{{ obituary.name }}</strong>
+                <p>Born: {{ obituary.date_of_birth }}</p>
+                <p>Died: {{ obituary.date_of_death }}</p>
+                <p>Message: {{ obituary.message }}</p>
+            </li>
+        {% empty %}
+            <li>No obituaries available.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
